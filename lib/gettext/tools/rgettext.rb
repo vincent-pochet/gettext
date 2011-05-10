@@ -121,7 +121,7 @@ TITLE
       pomessages = parse(paths)
       str = ""
       pomessages.each do |target|
-        str << target.to_po_str
+        str << target.to_po_str.force_encoding('UTF-8')
       end
       str
     end
